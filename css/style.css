@@ -1,7 +1,199 @@
-/* =============================
-   DETAIL PRODUK – PREMIUM RAPI
-============================= */
+/* =====================================================
+   REINMEDIA – FULL FINAL PREMIUM CSS
+   Versi: FINAL
+   ===================================================== */
 
+:root {
+  --black: #111;
+  --gray: #666;
+  --light: #fafafa;
+  --border: #eaeaea;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.nav a.active {
+  font-weight: 700;
+}
+
+/* ================= BUTTON ================= */
+.btn-buy {
+  background: var(--black);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.btn-detail {
+  border: 1px solid #ddd;
+  color: #111;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ================= HOME ================= */
+.home-hero {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #fafafa, #ffffff);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  color: #555;
+  margin-bottom: 26px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* ================= KATALOG ================= */
+.catalog-hero {
+  background: linear-gradient(to bottom, #f8f9fb, #ffffff);
+  padding: 80px 0 40px;
+  text-align: center;
+}
+
+.catalog-filter {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.catalog-filter input,
+.catalog-filter select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  min-width: 220px;
+}
+
+.catalog-section {
+  padding: 60px 0;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f7f7f7;
+  margin-bottom: 14px;
+}
+
+.product-meta {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* ================= DETAIL ================= */
 .detail-section {
   padding: 80px 0;
 }
@@ -19,38 +211,34 @@
   padding: 40px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .detail-image-wrap img {
   width: 100%;
   max-width: 360px;
-  object-fit: contain;
 }
 
-.detail-info h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+/* ================= FOOTER ================= */
+.footer {
+  padding: 50px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: #666;
+  margin-top: 80px;
 }
 
-.detail-meta {
-  color: #777;
-  margin-bottom: 20px;
-}
-
-.detail-desc {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-
-.detail-actions {
-  display: flex;
-  gap: 12px;
-}
-
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
+  .hero-grid,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-text h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
   }
 }
