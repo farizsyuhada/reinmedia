@@ -1,5 +1,5 @@
 // =====================================================
-// REINMEDIA – DATA PRODUK (FINAL VERSION)
+// REINMEDIA – DATA PRODUK FINAL (MOBILE PREMIUM)
 // =====================================================
 
 const products = [
@@ -8,7 +8,7 @@ const products = [
     name: "Myiwe Natural Black",
     brand: "Myiwe",
     color: "Natural Black",
-    desc: "Warna hitam alami yang memberikan kesan natural, berkilau, dan tahan lama.",
+    desc: "Warna hitam alami dengan hasil natural, berkilau, dan menutup uban secara merata.",
     image: "assets/images/myiwe-natural-black.jpg",
     link: "https://s.shopee.co.id/1gCOtqgk11"
   },
@@ -26,7 +26,7 @@ const products = [
     name: "Myiwe Brown",
     brand: "Myiwe",
     color: "Brown",
-    desc: "Warna coklat natural yang lembut dan elegan untuk tampilan sehari-hari.",
+    desc: "Coklat natural yang lembut dan cocok untuk tampilan sehari-hari.",
     image: "assets/images/myiwe-brown.jpg",
     link: "https://s.shopee.co.id/9zq8vUj4q0"
   },
@@ -35,7 +35,7 @@ const products = [
     name: "Myiwe Dark Brown",
     brand: "Myiwe",
     color: "Dark Brown",
-    desc: "Coklat gelap dengan hasil natural tanpa kesan kemerahan.",
+    desc: "Coklat gelap elegan tanpa kesan kemerahan.",
     image: "assets/images/myiwe-dark-brown.jpg",
     link: "https://s.shopee.co.id/gIToXZ8nH"
   },
@@ -44,7 +44,7 @@ const products = [
     name: "Aestika Black",
     brand: "Aestika",
     color: "Black",
-    desc: "Hitam natural yang terlihat alami dan tidak seperti cat rambut biasa.",
+    desc: "Hitam natural yang tampak alami dan tidak terlihat seperti cat.",
     image: "assets/images/aestika-black.jpg",
     link: "https://s.shopee.co.id/7V8pqL7EpV"
   },
@@ -53,7 +53,7 @@ const products = [
     name: "Aestika Light Brown",
     brand: "Aestika",
     color: "Light Brown",
-    desc: "Coklat terang yang memberikan kesan lembut, cerah, dan segar.",
+    desc: "Coklat terang yang memberi kesan lembut dan cerah.",
     image: "assets/images/aestika-light-brown.jpg",
     link: "https://s.shopee.co.id/3Vch3qcZBd"
   },
@@ -62,7 +62,7 @@ const products = [
     name: "Aestika Dark Brown",
     brand: "Aestika",
     color: "Dark Brown",
-    desc: "Coklat gelap elegan dengan hasil warna yang lebih tahan lama.",
+    desc: "Coklat gelap elegan dengan hasil warna tahan lama.",
     image: "assets/images/aestika-dark-brown.jpg",
     link: "https://s.shopee.co.id/5Akv2egsSs"
   }
