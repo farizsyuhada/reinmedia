@@ -1,8 +1,8 @@
 // =====================================================
-// REINMEDIA – FILTER & RENDER PRODUK (FINAL VERSION)
+// REINMEDIA – FILTER & RENDER PRODUK (MOBILE PREMIUM)
 // =====================================================
 
-const productList = document.getElementById("productList");
+const productList = document.getElementById("product-list") || document.getElementById("productList");
 const searchInput = document.getElementById("searchInput");
 const brandFilter = document.getElementById("brandFilter");
 
@@ -12,7 +12,7 @@ function renderProducts(list) {
   productList.innerHTML = "";
 
   if (list.length === 0) {
-    productList.innerHTML = "<p>Tidak ada produk ditemukan.</p>";
+    productList.innerHTML = "<p style='grid-column:1/-1'>Tidak ada produk ditemukan.</p>";
     return;
   }
 
@@ -21,13 +21,14 @@ function renderProducts(list) {
     card.className = "product-card";
 
     card.innerHTML = `
-      <img src="${p.image}" alt="${p.name}">
+      <img src="${p.image}" alt="${p.name}" loading="lazy">
       <h3>${p.name}</h3>
-      <div class="product-meta">${p.brand} • ${p.color}</div>
+      <p class="product-desc"><strong>Merek:</strong> ${p.brand}</p>
+      <p class="product-desc"><strong>Warna:</strong> ${p.color}</p>
       <p class="product-desc">${p.desc}</p>
-      <div class="product-actions">
-        <a href="detail.html?id=${p.id}" class="btn-detail">Detail</a>
-        <a href="${p.link}" target="_blank" class="btn-buy">Shopee</a>
+      <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="detail.html?id=${p.id}" class="btn-outline">Detail</a>
+        <a href="${p.link}" target="_blank" class="btn-primary">Shopee</a>
       </div>
     `;
 
@@ -36,8 +37,10 @@ function renderProducts(list) {
 }
 
 function filterProducts() {
-  const keyword = searchInput.value.toLowerCase();
-  const brand = brandFilter.value;
+  if (!searchInput && !brandFilter) return;
+
+  const keyword = searchInput ? searchInput.value.toLowerCase() : "";
+  const brand = brandFilter ? brandFilter.value : "";
 
   const filtered = products.filter(p => {
     const matchName = p.name.toLowerCase().includes(keyword);
@@ -48,10 +51,10 @@ function filterProducts() {
   renderProducts(filtered);
 }
 
-if (searchInput && brandFilter) {
-  searchInput.addEventListener("input", filterProducts);
-  brandFilter.addEventListener("change", filterProducts);
-}
+if (searchInput) searchInput.addEventListener("input", filterProducts);
+if (brandFilter) brandFilter.addEventListener("change", filterProducts);
 
 // Render awal
-renderProducts(products);
+if (typeof products !== "undefined") {
+  renderProducts(products);
+}
