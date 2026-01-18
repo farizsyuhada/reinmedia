@@ -2,55 +2,56 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Produk - Reinmedia</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="header">
-  <h1 class="logo">Reinmedia</h1>
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="katalog.html">Katalog</a>
-    <a href="bandingkan.html">Bandingkan</a>
-    <a href="edukasi.html">Edukasi</a>
-  </nav>
+<header class="header-premium">
+  <div class="container">
+    <h1 class="logo">Reinmedia</h1>
+    <nav class="nav-premium">
+      <a href="index.html">Home</a>
+      <a href="katalog.html">Katalog</a>
+      <a href="bandingkan.html">Perbandingan</a>
+      <a href="edukasi.html">Edukasi</a>
+    </nav>
+  </div>
 </header>
 
-<section class="hero-small">
-  <h2>Detail Produk</h2>
-  <p>Informasi lengkap sebelum membeli</p>
+<section class="hero-premium">
+  <div class="container">
+    <h2>Detail Produk</h2>
+    <p>Lihat informasi lengkap sebelum membeli</p>
+  </div>
 </section>
 
-<section class="detail-container" id="detailContainer">
-  <!-- Konten akan diisi oleh JavaScript -->
-</section>
+<section class="container" id="detailContainer"></section>
 
-<footer>
-  <p>&copy; 2026 Reinmedia</p>
+<footer class="footer-premium">
+  <div class="container">
+    <p>&copy; 2026 Reinmedia. All rights reserved.</p>
+  </div>
 </footer>
 
 <script src="js/data.js"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get("id"));
-
   const product = products.find(p => p.id === id);
-
   const container = document.getElementById("detailContainer");
 
   if (product) {
     container.innerHTML = `
       <div class="detail-card">
         <img src="${product.image}" alt="${product.name}" class="detail-img">
-
         <div class="detail-info">
           <h2>${product.name}</h2>
           <p><strong>Merek:</strong> ${product.brand}</p>
           <p><strong>Warna:</strong> ${product.color}</p>
           <p>${product.desc}</p>
-
-          <a href="${product.link}" target="_blank" class="btn">Beli di Shopee</a>
+          <a href="${product.link}" target="_blank" class="btn-primary">Beli di Shopee</a>
           <br><br>
           <a href="katalog.html" class="btn-outline">← Kembali ke Katalog</a>
         </div>
