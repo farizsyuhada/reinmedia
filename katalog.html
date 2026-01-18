@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Katalog Produk - Reinmedia</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">Reinmedia</h1>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="katalog.html" class="active">Katalog</a>
+    <a href="bandingkan.html">Bandingkan</a>
+    <a href="edukasi.html">Edukasi</a>
+  </nav>
+</header>
+
+<section class="hero-small">
+  <h2>Katalog Produk</h2>
+  <p>Pilih shampoo pewarna uban sesuai kebutuhanmu</p>
+</section>
+
+<section class="filter-section">
+  <input type="text" id="searchInput" placeholder="Cari produk..." />
+  
+  <select id="brandFilter">
+    <option value="all">Semua Merek</option>
+    <option value="Myiwe">Myiwe</option>
+    <option value="Aestika">Aestika</option>
+  </select>
+</section>
+
+<section id="product-list"></section>
+
+<footer>
+  <p>&copy; 2026 Reinmedia</p>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/filter.js"></script>
+
+</body>
+</html>
