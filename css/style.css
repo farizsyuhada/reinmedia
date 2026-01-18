@@ -1,12 +1,12 @@
 /* =====================================================
-   REINMEDIA – FULL FINAL PACKAGE v2
-   MOBILE PREMIUM OPTIMIZATION
+   REINMEDIA – FULL FINAL v3
+   + FLOATING WHATSAPP BUTTON
    ===================================================== */
 
 :root {
   --primary: #111;
   --secondary: #666;
-  --accent: #c9a46b;
+  --accent: #25D366;
   --bg: #f8f8f8;
   --card: #ffffff;
 }
@@ -141,6 +141,31 @@ body {
   text-align: center;
   background: #fff;
   margin-top: 60px;
+}
+
+/* FLOATING WHATSAPP BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
 }
 
 /* MOBILE OPTIMIZATION */
