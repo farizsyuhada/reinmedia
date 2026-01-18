@@ -33,6 +33,9 @@
   </div>
 </footer>
 
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/6283130814832" class="whatsapp-float" target="_blank" aria-label="Chat via WhatsApp">💬</a>
+
 <script src="js/data.js"></script>
 <script>
   const params = new URLSearchParams(window.location.search);
@@ -45,7 +48,7 @@
   if (product) {
     container.innerHTML = `
       <div class="product-card">
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.image}" alt="${product.name}" loading="lazy">
         <h2>${product.name}</h2>
         <p class="product-desc">${product.desc}</p>
         <p class="product-desc"><strong>Merek:</strong> ${product.brand}</p>
