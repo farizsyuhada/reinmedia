@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Katalog Produk – Reinmedia</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Katalog shampoo pewarna rambut uban dari Myiwe & Aestika. Pilih warna terbaik dan beli langsung di Shopee.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-wrap">
-      <h1 class="logo">Reinmedia</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="katalog.html" class="active">Katalog</a>
-        <a href="bandingkan.html">Perbandingan</a>
-        <a href="edukasi.html">Edukasi</a>
-      </nav>
+
+<header class="header">
+  <div class="container nav-wrap">
+    <h1 class="logo">Reinmedia</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="katalog.html" class="active">Katalog</a>
+      <a href="bandingkan.html">Perbandingan</a>
+      <a href="edukasi.html">Edukasi</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Katalog Produk</h1>
+    <p>Pilih warna rambut terbaik sesuai kebutuhanmu.</p>
+  </div>
+</section>
+
+<section class="catalog-section">
+  <div class="container">
+    <div class="product-grid" id="product-list">
+      <!-- Produk akan di-load dari data.js -->
     </div>
-  </header>
+  </div>
+</section>
 
-  <section class="catalog-hero">
-    <div class="container">
-      <h2>Katalog Produk</h2>
-      <p>Pilih warna terbaik untuk tampilan natural & elegan</p>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Reinmedia. All rights reserved.</p>
+  </div>
+</footer>
 
-      <div class="catalog-filter">
-        <input type="text" id="searchInput" placeholder="Cari produk..." />
-        <select id="brandFilter">
-          <option value="">Semua Merek</option>
-          <option value="Myiwe">Myiwe</option>
-          <option value="Aestika">Aestika</option>
-        </select>
-      </div>
-    </div>
-  </section>
+<script src="js/data.js"></script>
+<script src="js/filter.js"></script>
 
-  <section class="catalog-section">
-    <div class="container">
-      <div id="productList" class="product-grid"></div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Reinmedia. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="js/data.js"></script>
-  <script src="js/filter.js"></script>
 </body>
 </html>
