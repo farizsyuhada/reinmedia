@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Detail Produk – Reinmedia</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="description" content="Detail shampoo pewarna rambut uban. Lihat warna, deskripsi, dan beli langsung di Shopee melalui Reinmedia.">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-wrap">
-      <h1 class="logo">Reinmedia</h1>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="katalog.html">Katalog</a>
-        <a href="bandingkan.html">Perbandingan</a>
-        <a href="edukasi.html">Edukasi</a>
-      </nav>
-    </div>
-  </header>
 
-  <section class="detail-section">
-    <div class="container" id="detailContainer"></div>
-  </section>
+<header class="header">
+  <div class="container nav-wrap">
+    <h1 class="logo">Reinmedia</h1>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="katalog.html">Katalog</a>
+      <a href="bandingkan.html">Perbandingan</a>
+      <a href="edukasi.html">Edukasi</a>
+    </nav>
+  </div>
+</header>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Reinmedia. All rights reserved.</p>
-    </div>
-  </footer>
+<section class="catalog-section">
+  <div class="container" id="detail-container">
+    <!-- Detail produk akan muncul di sini -->
+  </div>
+</section>
 
-  <script src="js/data.js"></script>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const id = parseInt(params.get("id"));
-    const product = products.find(p => p.id === id);
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Reinmedia. All rights reserved.</p>
+  </div>
+</footer>
 
-    const container = document.getElementById("detailContainer");
+<script src="js/data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
 
-    if (product) {
-      container.innerHTML = `
-        <div class="detail-grid">
-          <div class="detail-image-wrap">
-            <img src="${product.image}" alt="${product.name}" />
-          </div>
-          <div class="detail-info">
-            <h2>${product.name}</h2>
-            <div class="detail-meta">${product.brand} • ${product.color}</div>
-            <p class="detail-desc">${product.desc}</p>
-            <div class="detail-actions">
-              <a href="${product.link}" target="_blank" class="btn-buy">Beli di Shopee</a>
-              <a href="katalog.html" class="btn-detail">Kembali ke Katalog</a>
-            </div>
-          </div>
+  const product = products.find(p => p.id == id);
+
+  const container = document.getElementById('detail-container');
+
+  if (product) {
+    container.innerHTML = `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p class="product-desc">${product.desc}</p>
+        <p class="product-desc"><strong>Merek:</strong> ${product.brand}</p>
+        <p class="product-desc"><strong>Warna:</strong> ${product.color}</p>
+        <div style="margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="${product.link}" class="btn-primary" target="_blank">Beli di Shopee</a>
+          <a href="katalog.html" class="btn-outline">Kembali</a>
         </div>
-      `;
-    } else {
-      container.innerHTML = "<p>Produk tidak ditemukan.</p>";
-    }
-  </script>
+      </div>
+    `;
+  } else {
+    container.innerHTML = '<p>Produk tidak ditemukan.</p>';
+  }
+</script>
+
 </body>
 </html>
